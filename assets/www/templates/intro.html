@@ -1,0 +1,102 @@
+
+    <!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+    <title></title>
+
+    <link href="lib/ionic/css/ionic.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+
+    <!-- IF using Sass (run gulp sass first), then uncomment below and remove the CSS includes above
+    <link href="css/ionic.app.css" rel="stylesheet">
+    -->
+
+    <!-- ionic/angularjs js -->
+    <script src="lib/ionic/js/ionic.bundle.js"></script>
+
+    <!-- cordova script (this will be a 404 during development) -->
+    <script src="cordova.js"></script>
+
+    <!-- your app's js -->
+    <script src="js/app.js"></script>
+    <script src="js/nipiceCtrl.js"></script>
+<!--    <script src="js/services.js"></script>-->
+<!--    <script src="js/directive.js"></script>-->
+  </head>
+  <body ng-app="Nipice">
+    <ion-view view-title="NIPICE">
+        <ion-nav-buttons side="left">
+                   <button class="button button-assertive button-clear no-animation"
+                  ng-click="previous()" ng-show="slideIndex > 0">
+           <i class="ion-arrow-left-a"></i>
+          </button>
+        </ion-nav-buttons>
+        <ion-nav-buttons side="right"> 
+          <button class="button button-assertive button-clear no-animation"
+                  ng-click="next()" ng-show="slideIndex != 2">
+          <i class="ion-arrow-right-a"></i>
+          </button> 
+                  </ion-nav-buttons>
+   <ion-slide-box on-slide-changed="slideChanged(index)" id="slideone">
+          <ion-slide>
+          <ion-content>
+              <br/>
+            
+                                        <h3>Thank you for choosing the Nipice App!</h3>
+            <div id="logo">
+              <img src="img/nipek.png">
+            </div>
+            <p>
+              We've worked super hard to make you happy.
+            </p>
+            <p>
+              But if you are angry, too bad.
+            </p>
+                       </ion-content>
+                                         </ion-slide>
+        <ion-slide>
+          <ion-content>
+              <br/>
+                               <h3>Using Nipice</h3>
+                        <div id="list">
+              <h5>Just three steps:</h5>
+              <ol>
+             <li>click on your desired option</li>
+                <li>Slide back to previous page if mistake was made</li>
+                                  <li>submit when you are ready</li>
+
+              </ol>
+                           </div>
+                              <h3>Any questions?</h3>
+            <p>
+              Too bad!
+            </p>
+                      </ion-content>   
+                    </ion-slide>
+          <ion-slide>
+           <ion-content>
+               <br/><br/>
+                            <button class="button button-dark" ng-click="showPopup()">
+     Enter name!</button>   
+                           <br/><br/>
+ <center><h3>
+      How Much Will You be Worth In 10 Years? 
+    </h3></center>
+                 <br/>
+               <button class="button button-balanced no-animation"
+                  ng-click="startApp()" >
+       Find Out Now...
+          </button>
+                                <br/><br/>
+   <button class="button button-dark" ng-click="disclaimer()">
+    <i class="ion-alert"></i>Disclaimer</button>
+             
+                    </ion-content>
+                      </ion-slide>
+        </ion-slide-box>
+              </ion-view>
+    
+    </body>
+    </html>

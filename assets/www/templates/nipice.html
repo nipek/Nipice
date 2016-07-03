@@ -1,0 +1,937 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+    <title></title>
+
+    <link href="lib/ionic/css/ionic.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+
+    <!-- IF using Sass (run gulp sass first), then uncomment below and remove the CSS includes above
+    <link href="css/ionic.app.css" rel="stylesheet">
+    -->
+
+    <!-- ionic/angularjs js -->
+    <script src="lib/ionic/js/ionic.bundle.js"></script>
+
+    <!-- cordova script (this will be a 404 during development) -->
+    <script src="cordova.js"></script>
+
+    <!-- your app's js -->
+    <script src="js/app.js"></script>
+    <script src="js/nipiceCtrl.js"></script>
+<!--    <script src="js/services.js"></script>-->
+<!--    <script src="js/directive.js"></script>-->
+  </head>
+  <body ng-app="Nipice">    
+          <ion-view hide-back-button="true" view-title="Nipice">
+                  <ion-nav-buttons side="right"> 
+                                  <button class="button button-assertive button-clear"  ng-click="toIntro()" ng-show="slideIndex > 0 ">Restart</button>
+                  </ion-nav-buttons> 
+                             <ion-slide-box  on-slide-changed="slideChanged(index)" id="slidetwo"    >     
+                                          <ion-slide>
+          <ion-content>
+              <br/>
+              <img src="img/gender.jpg" >
+              <br/>
+                                        <center><h3>
+  Are you a male or a female?
+    </h3></center>
+                         <br/>
+              <div class="list" >
+      <label class="item item-radio" >
+    <input type="radio" name="group" ng-click="pageOne(0)">
+    <div class="item-content"  >
+      Male
+    </div>
+    <i class="radio-icon ion-android-checkbox"></i>
+  </label>
+ <label class="item item-radio">
+    <input type="radio" name="group"  ng-click="pageOne(0)" >
+    <div class="item-content" >
+      Female
+    </div>
+    <i class="radio-icon ion-android-checkbox"></i>
+  </label> 
+ <label class="item item-radio">
+    <input type="radio" name="group"  ng-click="pageOne(-1000000)" >
+    <div class="item-content" >
+    Spiritual being
+    </div>
+    <i class="radio-icon ion-android-checkbox"></i>
+  </label>
+                               </div>
+                              </ion-content>
+                            </ion-slide>
+                                                <ion-slide>
+          <ion-content>
+                                     <br/>
+                 <img src="img/balance.jpeg" >
+              <br/>
+               <center><h3>
+  Current bank balance
+    </h3></center>
+              <br/>
+              <div class="list">   
+<label class="item item-radio">
+    <input type="radio" name="group" ng-click="pageTwo(100000000)"> 
+    <div class="item-content" >Chairman 
+    </div><i class="radio-icon ion-android-checkbox"></i> </label>
+         <label class="item item-radio">
+    <input type="radio" name="group" ng-click="pageTwo(50000000)">
+    <div class="item-content" >
+      N10million to N99.9million
+    </div>
+    <i class="radio-icon ion-android-checkbox"></i>
+  </label> 
+ <label class="item item-radio">
+    <input type="radio" name="group" ng-click="pageTwo(5000000)">
+    <div class="item-content" >
+    N1million to 9.99million
+    </div>
+    <i class="radio-icon ion-android-checkbox"></i>
+  </label>
+                   <label class="item item-radio">
+    <input type="radio" name="group" ng-click="pageTwo(500000)">
+    <div class="item-content" >
+   500k To 999k
+    </div>
+    <i class="radio-icon ion-android-checkbox"></i>
+  </label>
+                   <label class="item item-radio">
+    <input type="radio" name="group" ng-click="pageTwo(250000)">
+    <div class="item-content" >
+    200k To 499k
+    </div>
+    <i class="radio-icon ion-android-checkbox"></i>
+  </label>
+                   <label class="item item-radio">
+    <input type="radio" name="group" ng-click="pageTwo(100000)">
+    <div class="item-content" >
+   100k To 199k
+    </div>
+    <i class="radio-icon ion-android-checkbox"></i>
+  </label>
+                   <label class="item item-radio">
+    <input type="radio" name="group" ng-click="pageTwo(50000)">
+    <div class="item-content" >
+      Below 100k
+    </div>
+    <i class="radio-icon ion-android-checkbox"></i>
+  </label>
+                   <label class="item item-radio">
+    <input type="radio" name="group" ng-click="pageTwo(0)">
+    <div class="item-content" >
+  Mayor Of Brokelyn
+    </div>
+    <i class="radio-icon ion-android-checkbox"></i>
+  </label>                           
+</div>
+                              </ion-content>
+                            </ion-slide>
+<ion-slide>
+          <ion-content>
+                                                        <br/>
+              <img src="img/month.jpeg">
+                <br/>
+           <center>   <h3>
+          Monthly Income?
+    </h3></center>
+              <br/>
+              <div class="list">   
+<label class="item item-radio">
+    <input type="radio" name="group" ng-click="pageThree(10000000)"> 
+    <div class="item-content" >#Boss
+    </div><i class="radio-icon ion-android-checkbox"></i> </label>
+         <label class="item item-radio">
+    <input type="radio" name="group" ng-click="pageThree(5000000)">
+    <div class="item-content" >
+      N5million to N10million
+    </div>
+    <i class="radio-icon ion-android-checkbox"></i>
+  </label> 
+ <label class="item item-radio">
+    <input type="radio" name="group" ng-click="pageThree(2500000)">
+    <div class="item-content" >
+    N1million to 4.9million
+    </div>
+    <i class="radio-icon ion-android-checkbox"></i>
+  </label>
+                   <label class="item item-radio">
+    <input type="radio" name="group" ng-click="pageThree(500000)">
+    <div class="item-content" >
+   500k To 999k
+    </div>
+    <i class="radio-icon ion-android-checkbox"></i>
+  </label>
+                   <label class="item item-radio">
+    <input type="radio" name="group" ng-click="pageThree(250000)">
+    <div class="item-content" >
+    200k To 499k
+    </div>
+    <i class="radio-icon ion-android-checkbox"></i>
+  </label>
+                   <label class="item item-radio">
+    <input type="radio" name="group" ng-click="pageThree(100000)">
+    <div class="item-content" >
+   100k To 199k
+    </div>
+    <i class="radio-icon ion-android-checkbox"></i>
+  </label>
+                   <label class="item item-radio">
+    <input type="radio" name="group" ng-click="pageThree(50000)">
+    <div class="item-content" >
+  Below 100k
+    </div>
+    <i class="radio-icon ion-android-checkbox"></i>
+  </label>
+                   <label class="item item-radio">
+    <input type="radio" name="group" ng-click="pageThree(0)">
+    <div class="item-content" >
+ At All At All
+    </div>
+    <i class="radio-icon ion-android-checkbox"></i>
+  </label>                           
+</div>
+                              </ion-content>
+                            </ion-slide>
+                                 <ion-slide>
+          <ion-content>
+                                              <br/>
+              <img src="img/saving.jpeg">
+                <br/>
+           <center>   <h3>
+           How Much Do You Save Every Month? 
+    </h3></center>
+              <br/>
+              <div class="list">   
+                   <label class="item item-radio">
+    <input type="radio" name="group" ng-click="pageFour(1000000)">
+    <div class="item-content" >
+  Above 60% Of Your Income
+    </div>
+    <i class="radio-icon ion-android-checkbox"></i>
+  </label>
+                   <label class="item item-radio">
+    <input type="radio" name="group" ng-click="pageFour(500000)">
+    <div class="item-content" >
+    40% to 59% Of Your Income
+    </div>
+    <i class="radio-icon ion-android-checkbox"></i>
+  </label>
+                   <label class="item item-radio">
+    <input type="radio" name="group" ng-click="pageFour(250000)">
+    <div class="item-content" >
+   20% To 39% Of Your Income
+    </div>
+    <i class="radio-icon ion-android-checkbox"></i>
+  </label>
+                   <label class="item item-radio">
+    <input type="radio" name="group" ng-click="pageFour(100000)">
+    <div class="item-content" >
+  Less Than 20% Of Your Income
+    </div>
+    <i class="radio-icon ion-android-checkbox"></i>
+  </label>
+                   <label class="item item-radio">
+    <input type="radio" name="group" ng-click="pageFour(0)">
+    <div class="item-content" >
+ At All At All 
+    </div>
+    <i class="radio-icon ion-android-checkbox"></i>
+  </label>                           
+</div>
+                              </ion-content>
+                            </ion-slide>
+                                  <ion-slide>
+          <ion-content>
+                                              <br/>
+              <img src="img/education.jpeg">
+                <br/>
+           <center>   <h3>
+           Education Level? 
+    </h3></center>
+              <br/>
+              <div class="list"> 
+                            <label class="item item-radio">
+    <input type="radio" name="group" ng-click="pageFive(500000)">
+    <div class="item-content" >
+  PhD
+    </div>
+    <i class="radio-icon ion-android-checkbox"></i>
+  </label>
+                            <label class="item item-radio">
+    <input type="radio" name="group" ng-click="pageFive(250000)">
+    <div class="item-content" >
+ Masters
+    </div>
+    <i class="radio-icon ion-android-checkbox"></i>
+  </label>
+                            <label class="item item-radio">
+    <input type="radio" name="group" ng-click="pageFive(150000)">
+    <div class="item-content" >
+ Bachelors
+    </div>
+    <i class="radio-icon ion-android-checkbox"></i>
+  </label>
+                   <label class="item item-radio">
+    <input type="radio" name="group" ng-click="pageFive(100000)">
+    <div class="item-content" >
+  HND
+    </div>
+    <i class="radio-icon ion-android-checkbox"></i>
+  </label>
+                   <label class="item item-radio">
+    <input type="radio" name="group" ng-click="pageFive(50000)">
+    <div class="item-content" >
+    OND
+    </div>
+    <i class="radio-icon ion-android-checkbox"></i>
+  </label>
+                   <label class="item item-radio">
+    <input type="radio" name="group" ng-click="pageFive(10000)">
+    <div class="item-content" >
+  WASSCE
+    </div>
+    <i class="radio-icon ion-android-checkbox"></i>
+  </label>
+                   <label class="item item-radio">
+    <input type="radio" name="group" ng-click="pageFive(500)">
+    <div class="item-content" >
+  Primary
+    </div>
+    <i class="radio-icon ion-android-checkbox"></i>
+  </label>
+                   <label class="item item-radio">
+    <input type="radio" name="group" ng-click="pageFive(0)">
+    <div class="item-content" >
+ School Of Life
+    </div>
+    <i class="radio-icon ion-android-checkbox"></i>
+  </label>                           
+</div>
+                              </ion-content>
+                            </ion-slide>
+                                 <ion-slide>
+          <ion-content>
+                                              <br/>
+              <img src="img/question.jpeg">
+                <br/>
+           <center>   <h3>
+           What Do You Do For A Living? 
+    </h3></center>
+              <br/>
+              <div class="list">
+                                        <label class="item item-radio">
+    <input type="radio" name="group" ng-click="pageSix(250000)">
+    <div class="item-content" >
+ Politician
+    </div>
+    <i class="radio-icon ion-android-checkbox"></i>
+  </label>
+                            <label class="item item-radio">
+    <input type="radio" name="group" ng-click="pageSix(150000)">
+    <div class="item-content" >
+Oil And Gas
+    </div>
+    <i class="radio-icon ion-android-checkbox"></i>
+  </label>
+                       <label class="item item-radio">
+    <input type="radio" name="group" ng-click="pageSix(150000)">
+    <div class="item-content" >
+Computer Scientist
+    </div>
+    <i class="radio-icon ion-android-checkbox"></i>
+  </label>
+                            <label class="item item-radio">
+    <input type="radio" name="group" ng-click="pageSix(120000)">
+    <div class="item-content" >
+ Celebrity
+    </div>
+    <i class="radio-icon ion-android-checkbox"></i>
+  </label>
+                   <label class="item item-radio">
+    <input type="radio" name="group" ng-click="pageSix(100000)">
+    <div class="item-content" >
+  Doctor
+    </div>
+    <i class="radio-icon ion-android-checkbox"></i>
+  </label>
+                   <label class="item item-radio">
+    <input type="radio" name="group" ng-click="pageSix(75000)">
+    <div class="item-content" >
+    Contractor
+    </div>
+    <i class="radio-icon ion-android-checkbox"></i>
+  </label>
+                   <label class="item item-radio">
+    <input type="radio" name="group" ng-click="pageSix(75000)">
+    <div class="item-content" >
+  Lawyer
+    </div>
+    <i class="radio-icon ion-android-checkbox"></i>
+  </label>
+                   <label class="item item-radio">
+    <input type="radio" name="group" ng-click="pageSix(50000)">
+    <div class="item-content" >
+  Engineer
+    </div>
+    <i class="radio-icon ion-android-checkbox"></i>
+  </label>
+                   <label class="item item-radio">
+    <input type="radio" name="group" ng-click="pageSix(50000)">
+    <div class="item-content" >
+ Banker
+    </div>
+    <i class="radio-icon ion-android-checkbox"></i>
+  </label> 
+                                     <label class="item item-radio">
+    <input type="radio" name="group" ng-click="pageSix(25000)">
+    <div class="item-content" >
+ Businessman
+    </div>
+    <i class="radio-icon ion-android-checkbox"></i>
+  </label>          
+                                     <label class="item item-radio">
+    <input type="radio" name="group" ng-click="pageSix(15000)">
+    <div class="item-content" >
+Civil Servant
+    </div>
+    <i class="radio-icon ion-android-checkbox"></i>
+  </label>          
+                                     <label class="item item-radio">
+    <input type="radio" name="group" ng-click="pageSix(15000)">
+    <div class="item-content" >
+Lecturer
+    </div>
+    <i class="radio-icon ion-android-checkbox"></i>
+  </label>          
+                                     <label class="item item-radio">
+    <input type="radio" name="group" ng-click="pageSix(15000)">
+    <div class="item-content" >
+ Pastor/Imam
+    </div>
+    <i class="radio-icon ion-android-checkbox"></i>
+  </label>          
+                                     <label class="item item-radio">
+    <input type="radio" name="group" ng-click="pageSix(10000)">
+    <div class="item-content" >
+ Journalist
+    </div>
+    <i class="radio-icon ion-android-checkbox"></i>
+  </label>          
+                                     <label class="item item-radio">
+    <input type="radio" name="group" ng-click="pageSix(10000)">
+    <div class="item-content" >
+ Office Worker
+    </div>
+    <i class="radio-icon ion-android-checkbox"></i>
+  </label>          
+                                     <label class="item item-radio">
+    <input type="radio" name="group" ng-click="pageSix(7500)">
+    <div class="item-content" >
+ Undergraduate
+    </div>
+    <i class="radio-icon ion-android-checkbox"></i>
+  </label>          
+                                     <label class="item item-radio">
+    <input type="radio" name="group" ng-click="pageSix(7500)">
+    <div class="item-content" >
+ Soldier
+    </div>
+    <i class="radio-icon ion-android-checkbox"></i>
+  </label>          
+                                     <label class="item item-radio">
+    <input type="radio" name="group" ng-click="pageSix(5000)">
+    <div class="item-content" >
+ Favor Market
+    </div>
+    <i class="radio-icon ion-android-checkbox"></i>
+  </label>          
+                                     <label class="item item-radio">
+    <input type="radio" name="group" ng-click="pageSix(5000)">
+    <div class="item-content" >
+ Police
+    </div>
+    <i class="radio-icon ion-android-checkbox"></i>
+  </label>          
+                                     <label class="item item-radio">
+    <input type="radio" name="group" ng-click="pageSix(-5000)">
+    <div class="item-content" >
+ Gateman/Gatewoman
+    </div>
+    <i class="radio-icon ion-android-checkbox"></i>
+  </label>          
+                                     <label class="item item-radio">
+    <input type="radio" name="group" ng-click="pageSix(-5000)">
+    <div class="item-content" >
+ Agbero
+    </div>
+    <i class="radio-icon ion-android-checkbox"></i>
+  </label>          
+                                     <label class="item item-radio">
+    <input type="radio" name="group" ng-click="pageSix(-25000)">
+    <div class="item-content" >
+ Naira-Betting
+    </div>
+    <i class="radio-icon ion-android-checkbox"></i>
+  </label>          
+                                     <label class="item item-radio">
+    <input type="radio" name="group" ng-click="pageSix(-35000)">
+    <div class="item-content" >
+Yahoo Yahoo
+    </div>
+    <i class="radio-icon ion-android-checkbox"></i>
+  </label>          
+                                     <label class="item item-radio">
+    <input type="radio" name="group" ng-click="pageSix(-50000)">
+    <div class="item-content" >
+ Twitter Celeb
+    </div>
+    <i class="radio-icon ion-android-checkbox"></i>
+  </label>          
+                                     <label class="item item-radio">
+    <input type="radio" name="group" ng-click="pageSix(-50000)">
+    <div class="item-content" >
+ Big Boy
+    </div>
+    <i class="radio-icon ion-android-checkbox"></i>
+  </label>                   
+</div>
+                              </ion-content>
+                            </ion-slide>
+         <ion-slide>
+          <ion-content>
+              <br/>
+              <img src="img/career.jpeg" >
+              <br/>
+                                        <center><h3>
+  Career Goals 
+    </h3></center>
+                         <br/>
+              <div class="list" >
+      <label class="item item-radio" >
+    <input type="radio" name="group" ng-click="pageSeven(500000)">
+    <div class="item-content"  >
+     MD/CEO
+    </div>
+    <i class="radio-icon ion-android-checkbox"></i>
+  </label>
+ <label class="item item-radio">
+    <input type="radio" name="group"  ng-click="pageSeven(350000)" >
+    <div class="item-content" >
+      Entrepreneur
+    </div>
+    <i class="radio-icon ion-android-checkbox"></i>
+  </label> 
+ <label class="item item-radio">
+    <input type="radio" name="group"  ng-click="pageSeven(350000)" >
+    <div class="item-content" >
+    Govt Contractor
+    </div>
+    <i class="radio-icon ion-android-checkbox"></i>
+  </label>
+                  <label class="item item-radio">
+    <input type="radio" name="group"  ng-click="pageSeven(250000)" >
+    <div class="item-content" >
+   Professor
+    </div>
+    <i class="radio-icon ion-android-checkbox"></i>
+  </label>
+                  <label class="item item-radio">
+    <input type="radio" name="group"  ng-click="pageSeven(250000)" >
+    <div class="item-content" >
+   Thick Madam/Lagos Big Boy
+    </div>
+    <i class="radio-icon ion-android-checkbox"></i>
+  </label>
+                  <label class="item item-radio">
+    <input type="radio" name="group"  ng-click="pageSeven(250000)" >
+    <div class="item-content" >
+   Top Politician
+    </div>
+    <i class="radio-icon ion-android-checkbox"></i>
+  </label>
+                  <label class="item item-radio">
+    <input type="radio" name="group"  ng-click="pageSeven(250000)" >
+    <div class="item-content" >
+   Military General
+    </div>
+    <i class="radio-icon ion-android-checkbox"></i>
+  </label>
+                  <label class="item item-radio">
+    <input type="radio" name="group"  ng-click="pageSeven(250000)" >
+    <div class="item-content" >
+  SAN
+    </div>
+    <i class="radio-icon ion-android-checkbox"></i>
+  </label>
+                  <label class="item item-radio">
+    <input type="radio" name="group"  ng-click="pageSeven(200000)" >
+    <div class="item-content" >
+ Director
+    </div>
+    <i class="radio-icon ion-android-checkbox"></i>
+  </label>
+                  <label class="item item-radio">
+    <input type="radio" name="group"  ng-click="pageSeven(150000)" >
+    <div class="item-content" >
+    Top Civil Servant
+    </div>
+    <i class="radio-icon ion-android-checkbox"></i>
+  </label>
+                            <label class="item item-radio">
+    <input type="radio" name="group"  ng-click="pageSeven(100000)" >
+    <div class="item-content" >
+    Celebrity
+    </div>
+    <i class="radio-icon ion-android-checkbox"></i>
+  </label>
+                            <label class="item item-radio">
+    <input type="radio" name="group"  ng-click="pageSeven(25000)" >
+    <div class="item-content" >
+   Marry Rich Wife/Rich Husband
+    </div>
+    <i class="radio-icon ion-android-checkbox"></i>
+  </label>
+                               </div>
+                              </ion-content>
+                            </ion-slide>
+                                   <ion-slide>
+          <ion-content>
+              <br/>
+              <img src="img/depending.png" >
+              <br/>
+                                        <center><h3>
+  How Many Dependants Do you Have? 
+    </h3></center>
+                         <br/>
+              <div class="list" >
+      <label class="item item-radio" >
+    <input type="radio" name="group" ng-click="pageEight(0)">
+    <div class="item-content"  >
+     O-Y-O
+    </div>
+    <i class="radio-icon ion-android-checkbox"></i>
+  </label>
+                    <label class="item item-radio" >
+    <input type="radio" name="group" ng-click="pageEight(-50000)">
+    <div class="item-content"  >
+    Nuclear Family
+    </div>
+    <i class="radio-icon ion-android-checkbox"></i>
+  </label>
+                    <label class="item item-radio" >
+    <input type="radio" name="group" ng-click="pageEight(-125000)">
+    <div class="item-content"  >
+    Extended Family
+    </div>
+    <i class="radio-icon ion-android-checkbox"></i>
+  </label>
+ <label class="item item-radio">
+    <input type="radio" name="group"  ng-click="pageEight(-250000)" >
+    <div class="item-content" >
+     Your Village People
+    </div>
+    <i class="radio-icon ion-android-checkbox"></i>
+  </label> 
+ <label class="item item-radio">
+    <input type="radio" name="group"  ng-click="pageEight(-500000)" >
+    <div class="item-content" >
+    Doro is a cheerful giver
+    </div>
+    <i class="radio-icon ion-android-checkbox"></i>
+  </label>
+                               </div>
+                              </ion-content>
+                            </ion-slide>
+                                     <ion-slide>
+          <ion-content>
+              <br/>
+              <img src="img/lunch.jpeg" >
+              <br/>
+                                        <center><h3>
+  Where do you eat Lunch? 
+    </h3></center>
+                         <br/>
+              <div class="list" >
+      <label class="item item-radio" >
+    <input type="radio" name="group" ng-click="pageNine(-75000)">
+    <div class="item-content"  >
+    Sky Loungey(10k)
+    </div>
+    <i class="radio-icon ion-android-checkbox"></i>
+  </label>
+                    <label class="item item-radio" >
+    <input type="radio" name="group" ng-click="pageNine(-50000)">
+    <div class="item-content"  >
+    Jeviniki(4k)
+    </div>
+    <i class="radio-icon ion-android-checkbox"></i>
+  </label>
+                    <label class="item item-radio" >
+    <input type="radio" name="group" ng-click="pageNine(-25000)">
+    <div class="item-content"  >
+   iKFC(2k)
+    </div>
+    <i class="radio-icon ion-android-checkbox"></i>
+  </label>
+ <label class="item item-radio">
+    <input type="radio" name="group"  ng-click="pageNine(-10000)" >
+    <div class="item-content" >
+    Mr biggs(1k)
+    </div>
+    <i class="radio-icon ion-android-checkbox"></i>
+  </label> 
+ <label class="item item-radio">
+    <input type="radio" name="group"  ng-click="pageNine(-2500)" >
+    <div class="item-content" >
+   Iya Swale
+    </div>
+    <i class="radio-icon ion-android-checkbox"></i>
+  </label>
+                  <label class="item item-radio">
+    <input type="radio" name="group"  ng-click="pageNine(-1000)" >
+    <div class="item-content" >
+Cook at home(200)
+    </div>
+    <i class="radio-icon ion-android-checkbox"></i>
+  </label>
+                               </div>
+                              </ion-content>
+                            </ion-slide>
+                             <ion-slide>
+          <ion-content>
+              <br/>
+              <img src="img/roll.jpg" >
+              <br/>
+                                        <center><h3>
+  How do you roll? 
+    </h3></center>
+                         <br/>
+              <div class="list" >
+      <label class="item item-radio" >
+    <input type="radio" name="group" ng-click="pageTen(0)">
+    <div class="item-content"  >
+   Official Car
+    </div>
+    <i class="radio-icon ion-android-checkbox"></i>
+  </label>
+                    <label class="item item-radio" >
+    <input type="radio" name="group" ng-click="pageTen(500)">
+    <div class="item-content"  >
+    Only you waka come?
+    </div>
+    <i class="radio-icon ion-android-checkbox"></i>
+  </label>
+                    <label class="item item-radio" >
+    <input type="radio" name="group" ng-click="pageTen(-5000)">
+    <div class="item-content"  >
+   BRT
+    </div>
+    <i class="radio-icon ion-android-checkbox"></i>
+  </label>
+ <label class="item item-radio">
+    <input type="radio" name="group"  ng-click="pageTen(-5000)" >
+    <div class="item-content" >
+     Borrow Borrow
+    </div>
+    <i class="radio-icon ion-android-checkbox"></i>
+  </label> 
+ <label class="item item-radio">
+    <input type="radio" name="group"  ng-click="pageTen(-10000)" >
+    <div class="item-content" >
+    Danfo
+    </div>
+    <i class="radio-icon ion-android-checkbox"></i>
+  </label>
+  <label class="item item-radio">
+    <input type="radio" name="group"  ng-click="pageTen(-10000)" >
+    <div class="item-content" >
+    Okada
+    </div>
+    <i class="radio-icon ion-android-checkbox"></i>
+  </label>
+  <label class="item item-radio">
+    <input type="radio" name="group"  ng-click="pageTen(-20000)" >
+    <div class="item-content" >
+    Cab
+    </div>
+    <i class="radio-icon ion-android-checkbox"></i>
+  </label>
+  <label class="item item-radio">
+    <input type="radio" name="group"  ng-click="pageTen(-100000)" >
+    <div class="item-content" >
+    Push and start
+    </div>
+    <i class="radio-icon ion-android-checkbox"></i>
+  </label>
+  <label class="item item-radio">
+    <input type="radio" name="group"  ng-click="pageTen(-350000)" >
+    <div class="item-content" >
+    Tokunbo
+    </div>
+    <i class="radio-icon ion-android-checkbox"></i>
+  </label>
+  <label class="item item-radio">
+    <input type="radio" name="group"  ng-click="pageTen(-500000)" >
+    <div class="item-content" >
+    Tear-Rubber ride
+    </div>
+    <i class="radio-icon ion-android-checkbox"></i>
+  </label>
+                               </div>
+                              </ion-content>
+                            </ion-slide>
+                            <ion-slide>
+          <ion-content>
+              <br/>
+              <img src="img/question.jpeg" >
+              <br/>
+                                        <center><h3>
+ Social life
+    </h3></center>
+                         <br/>
+              <div class="list" >
+      <label class="item item-radio" >
+    <input type="radio" name="group" ng-click="pageEleven(-75000)">
+    <div class="item-content"  >
+    Occassional#TurnUp
+    </div>
+    <i class="radio-icon ion-android-checkbox"></i>
+  </label>
+                    <label class="item item-radio" >
+    <input type="radio" name="group" ng-click="pageEleven(-50000)">
+    <div class="item-content"  >
+    Omo Jesu
+    </div>
+    <i class="radio-icon ion-android-checkbox"></i>
+  </label>
+                    <label class="item item-radio" >
+    <input type="radio" name="group" ng-click="pageEleven(-25000)">
+    <div class="item-content"  >
+  Introvert
+    </div>
+    <i class="radio-icon ion-android-checkbox"></i>
+  </label>
+ <label class="item item-radio">
+    <input type="radio" name="group"  ng-click="pageEleven(-10000)" >
+    <div class="item-content" >
+   Just there
+    </div>
+    <i class="radio-icon ion-android-checkbox"></i>
+  </label> 
+ <label class="item item-radio">
+    <input type="radio" name="group"  ng-click="pageEleven(-2500)" >
+    <div class="item-content" >
+   Party Animal
+    </div>
+    <i class="radio-icon ion-android-checkbox"></i>
+  </label>
+                                                </div>
+                              </ion-content>
+                            </ion-slide>
+                                        <ion-slide>
+          <ion-content>
+              <br/>
+              <img src="img/question.jpeg" >
+              <br/>
+                                        <center><h3>
+ Who is your godfather
+    </h3></center>
+                         <br/>
+              <div class="list" >
+      <label class="item item-radio" >
+    <input type="radio" name="group" ng-click="pageTweleve(-1175000)">
+    <div class="item-content"  >
+    Baba ifa
+    </div>
+    <i class="radio-icon ion-android-checkbox"></i>
+  </label>
+                    <label class="item item-radio" >
+    <input type="radio" name="group" ng-click="pageTweleve(5000000)">
+    <div class="item-content"  >
+    Bill gates
+    </div>
+    <i class="radio-icon ion-android-checkbox"></i>
+  </label>
+                    <label class="item item-radio" >
+    <input type="radio" name="group" ng-click="pageTweleve(6000000)">
+    <div class="item-content"  >
+ Baba God
+    </div>
+    <i class="radio-icon ion-android-checkbox"></i>
+  </label>
+ <label class="item item-radio">
+    <input type="radio" name="group"  ng-click="pageTweleve(-7000000)" >
+    <div class="item-content" >
+   Brother Laide
+    </div>
+    <i class="radio-icon ion-android-checkbox"></i>
+  </label> 
+ <label class="item item-radio">
+    <input type="radio" name="group"  ng-click="pageTweleve(4000000)" >
+    <div class="item-content" >
+   Lil Wayne
+    </div>
+    <i class="radio-icon ion-android-checkbox"></i>
+  </label>
+                                                </div>
+                              </ion-content>
+                            </ion-slide>
+                                   <ion-slide>
+          <ion-content>
+              <br/>
+              <img src="img/question.jpeg" >
+              <br/>
+                                        <center><h3>
+  Which will you prefer? 
+    </h3></center>
+                         <br/>
+              <div class="list" >
+      <label class="item item-radio" >
+    <input type="radio" name="group" ng-click="pageThirteen(-3000000)">
+    <div class="item-content"  >
+  4-week yankee trip
+    </div>
+    <i class="radio-icon ion-android-checkbox"></i>
+  </label>
+                    <label class="item item-radio" >
+    <input type="radio" name="group" ng-click="pageThirteen(3000000)">
+    <div class="item-content"  >
+    Masters degree scholarship    </div>
+    <i class="radio-icon ion-android-checkbox"></i>
+  </label>
+                    <label class="item item-radio" >
+    <input type="radio" name="group" ng-click="pageThirteen(4000000)">
+    <div class="item-content"  >
+   N2m(Strictly) to start a business
+    </div>
+    <i class="radio-icon ion-android-checkbox"></i>
+  </label>
+ <label class="item item-radio">
+    <input type="radio" name="group"  ng-click="pageThirteen(-2000000)" >
+    <div class="item-content" >
+  N1.5m(Strictly) flexing money
+    </div>
+    <i class="radio-icon ion-android-checkbox"></i>
+  </label> 
+                                </div>
+                              </ion-content>
+                            </ion-slide>
+                             <ion-slide>
+                                 <ion-content>
+                                     <br/>
+                                     <img src="img/button.jpeg">
+                                     <br/><br/>
+                                                  <button class="button button-full button-assertive" ng-click="lastPage()">
+       submit
+             </button>
+                                     </ion-content>
+                                 </ion-slide>      
+              </ion-slide-box>
+
+            </ion-view>
+          </body>
+</html>

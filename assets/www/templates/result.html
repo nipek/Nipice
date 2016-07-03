@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+    <title></title>
+
+    <link href="lib/ionic/css/ionic.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+
+    <!-- IF using Sass (run gulp sass first), then uncomment below and remove the CSS includes above
+    <link href="css/ionic.app.css" rel="stylesheet">
+    -->
+
+    <!-- ionic/angularjs js -->
+    <script src="lib/ionic/js/ionic.bundle.js"></script>
+
+    <!-- cordova script (this will be a 404 during development) -->
+    <script src="cordova.js"></script>
+
+    <!-- your app's js -->
+    <script src="js/app.js"></script>
+    <script src="js/nipiceCtrl.js"></script>
+<!--    <script src="js/services.js"></script>-->
+<!--    <script src="js/directive.js"></script>-->
+  </head>
+  <body ng-app="Nipice">
+ <ion-view view-title="NIPICE">
+               <ion-content >
+    <div class="image">
+       <img class="certify" src="img/certify.png">
+        <h4 class="name">{{data.userName|uppercase}}</h4>
+  
+    <h4 class="result">NGN    {{result|number:2}}</h4>      
+ <h4 class="date">{{CurrentDate | date:'dd, MMMM yyyy'}}</h4>
+</div>
+                 
+      </ion-content>
+      </ion-view>        
+           
+               </body>
+</html>
